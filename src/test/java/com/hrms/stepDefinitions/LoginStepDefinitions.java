@@ -1,4 +1,4 @@
-package com.hrms.stepDefinations;
+package com.hrms.stepDefinitions;
 
 
 import org.junit.Assert; // when we importing we need to choose org.junit!!!!
@@ -10,7 +10,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class LoginStepDefinations extends CommonMethods{
+public class LoginStepDefinitions extends CommonMethods{
 
 	@Given("go to HRMS login page")
 	public void go_to_hrms_login_page() {
