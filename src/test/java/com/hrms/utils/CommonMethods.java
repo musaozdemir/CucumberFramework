@@ -83,16 +83,22 @@ import com.hrms.testbase.PageInitializer;
 		 * Method that will take a screenshot and store with name in specified location with .png extension
 		 * @param fileName
 		 */
-		public static void takeScreenshot(String fileName) {
+		public static byte[] takeScreenshot(String fileName) {
 			
 			TakesScreenshot ts = (TakesScreenshot) driver;
+			byte[] bytes = ts.getScreenshotAs(OutputType.BYTES);
+			
 			File src = ts.getScreenshotAs(OutputType.FILE);
 			try {
 				FileUtils.copyFile(src, new File(Constants.SCREENSHOT_FILEPATH + fileName +getTimeStamp()+ ".png"));
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
+			return bytes;
 		}
+		
+	
+		
 		
 		public static String getTimeStamp() {
 			Date date = new Date();
