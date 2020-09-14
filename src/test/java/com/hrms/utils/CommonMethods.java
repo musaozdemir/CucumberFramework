@@ -97,8 +97,7 @@ import com.hrms.testbase.PageInitializer;
 			return bytes;
 		}
 		
-	
-		
+
 		
 		public static String getTimeStamp() {
 			Date date = new Date();

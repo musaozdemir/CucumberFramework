@@ -8,6 +8,9 @@ import com.hrms.testbase.BaseClass;
 
 public class AddEmployeePageElements extends BaseClass{
 	
+	@FindBy(xpath = "//h1[text()='Add Employee']")
+	public WebElement addEpmloyeText;
+	
 	@FindBy(xpath = "//input[@id = 'firstName']")
 	public WebElement firstNameField;
 	

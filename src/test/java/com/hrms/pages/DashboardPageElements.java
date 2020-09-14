@@ -33,6 +33,8 @@ public class DashboardPageElements extends BaseClass {
 	
 	@FindBy(id = "menu_pim_addEmployee")
 	public WebElement addEmpBtn;
+	
+	
 
 
 	public DashboardPageElements() {
