@@ -7,27 +7,20 @@ import com.hrms.utils.CommonMethods;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-
 public class AddEmployeeDefinitions extends CommonMethods {
 
-	
 	@When("navigate to Add employee page")
 	public void navigate_to_Add_employee_page() {
-	   jsClick(dash.pimLinkBtn); 
-	   jsClick(dash.addEmpBtn);
-	   
+		jsClick(dash.pimLinkBtn);
+		jsClick(dash.addEmpBtn);
+
 	}
 
-	@Then("verify to add employee text box")
-	public void verify_to_add_employee_text_box() {
-	   Assert.assertTrue(addEmp.addEpmloyeText.isDisplayed());
-	}
+	@When("add employee details")
+	public void add_employee_details() {
+		sendText(addEmp.firstNameField, "Alex");
+		sendText(addEmp.lastName, "DeSouza");
 
-	@When("add employee details and save")
-	public void add_employee_details_and_save() {
-	  sendText(addEmp.firstNameField, "Alex");
-	  sendText(addEmp.lastName, "DeSouza");
-	  jsClick(addEmp.saveButton);
 	}
 
 	@Then("verify employee name in employee list")
@@ -35,18 +28,44 @@ public class AddEmployeeDefinitions extends CommonMethods {
 		Assert.assertEquals(persDetails.profileName.getText(), "Alex DeSouza");
 	}
 
-	@When("add employee details with login details and save")
-	public void add_employee_details_with_login_details_and_save() {
-		sendText(addEmp.firstNameField, "Alex");
-		sendText(addEmp.lastName, "DeSouza");
-		
+	@When("click login details")
+	public void click_login_details() {
 		jsClick(addEmp.createLoginDetailsCheckbox);
 		sendText(addEmp.userName, "AlexDesouza1");
 		sendText(addEmp.userPassword, "AbCD@#$1290$");
 		sendText(addEmp.confirmPassword, "AbCD@#$1290$");
-		
-		jsClick(addEmp.saveButton);
-		
+
 	}
-	
+
+	@When("enter first name as {string} middle name {string} and last name {string}")
+	public void enter_first_name_as_middle_name_and_last_name(String firstname, String middlename, String lastname) {
+		sendText(addEmp.firstNameField, firstname);
+		sendText(addEmp.middleName, middlename);
+		sendText(addEmp.lastName, lastname);
+
+	}
+
+	@Then("click save button")
+	public void click_save_button() {
+		jsClick(addEmp.saveButton);
+	}
+
+	@Then("verify that {string} is added sucsasfully")
+	public void verify_that_is_added_sucsasfully(String fullname) {
+		Assert.assertEquals(persDetails.profileName.getText(), fullname);
+
+	}
+
+	@When("enter employee {string},  {string} and {string}")
+	public void enter_employee_and(String firstname, String middlename, String lastname) {
+		sendText(addEmp.firstNameField, firstname);
+		sendText(addEmp.middleName, middlename);
+		sendText(addEmp.lastName, lastname);
+	}
+
+	@Then("verify that {string},  {string} and {string} is successfully added")
+	public void verify_that_and_is_successfully_added(String firstname, String middlename, String lastname) {
+		Assert.assertEquals(persDetails.profileName.getText(), firstname + " " + middlename + " " + lastname);
+	}
+
 }
