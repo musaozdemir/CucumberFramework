@@ -1,15 +1,16 @@
-
 Feature: Add Employee Functionalty
 
   Background: 
     When login with valid credentials
     When navigate to Add employee page
-	@addEmployee
+
+  @addEmployee
   Scenario: Add new employee without login details without middle name
     When add employee details
     Then click save button
     And verify employee name in employee list
-	@addEmployee
+
+  @addEmployee
   Scenario: Add new employee with login details
     When add employee details
     When click login details
