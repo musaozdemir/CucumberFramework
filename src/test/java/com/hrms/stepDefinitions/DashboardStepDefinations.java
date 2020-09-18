@@ -21,10 +21,8 @@ public class DashboardStepDefinations extends CommonMethods {
 	   for (WebElement dashTab : dash.dashTabs) {
 		  actualDashTabs.add(dashTab.getText());
 	   } 
-		  System.out.println(expectedDashTabs);
-		  System.out.println(actualDashTabs);
-
-		  
+//		  System.out.println(expectedDashTabs);
+//		  System.out.println(actualDashTabs);
 		  Assert.assertEquals(expectedDashTabs, actualDashTabs);
 		
 	}

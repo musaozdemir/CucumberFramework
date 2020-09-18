@@ -97,11 +97,15 @@ import com.hrms.testbase.PageInitializer;
 			return bytes;
 		}
 		
+		public static void waitForVisibility(WebElement element) {
+			getWaitObject().until(ExpectedConditions.visibilityOf(element));
+		}
 
 		
 		public static String getTimeStamp() {
 			Date date = new Date();
 	
+		
 			
 			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd-HH_mm_ss");
 			return sdf.format(date);

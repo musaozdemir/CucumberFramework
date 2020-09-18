@@ -34,3 +34,21 @@ Feature: Add Employee Functionalty
       | Mark       | J           | Smith     |
       | John       | F           | kennedy   |
       | Musa       | M           | Ozdemir   |
+
+  
+  @dtwithHeader
+  Scenario: Adding multiple employees at once execution
+    When add multiple employees and verify they are added
+      | First Name | Middle Name | Last Name |
+      | Mark       | J           | Smith     |
+      | John       | F           | kennedy   |
+      | Musa       | M           | Ozdemir   |
+      | John			 | M					 | Wick			 |
+      
+     @excelTask 
+  Scenario: Adding multiple employees from excel file
+  	When add multiple employees from "AddEmployee" verify they are added successfully
+  	
+  	
+      
+      

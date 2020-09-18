@@ -1,3 +1,4 @@
+@login
 Feature: Login Functionalty
 
   @smoke
@@ -5,7 +6,7 @@ Feature: Login Functionalty
     When login with valid credentials
     Then verify the dasboard logo is displayes
 
-  @smoke
+ 
   Scenario: Login with invalid credentials
     When login with invalid credentials
     Then verify the error message
