@@ -40,7 +40,6 @@ public class DashboardPageElements extends BaseClass {
 	public List<WebElement> dashTabs;
 	
 
-
 	public DashboardPageElements() {
 		PageFactory.initElements(driver, this);
 	}

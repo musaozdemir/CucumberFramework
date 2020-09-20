@@ -15,11 +15,10 @@ import io.cucumber.junit.CucumberOptions;
 				 plugin = {"pretty",//set: What all report formats to use
 						   "html:target/cucumber-default-reports",// generates default html reports
 						   "rerun:target/FailedTests.txt" ,//generates txt file only with failed tests	
-							"json:target/cucumber.json"	 //generates json reports
 							}
 				) 
 
 
-public class TestRunner {
-	
+public class SmokeRunner {
+
 }

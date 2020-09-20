@@ -10,7 +10,7 @@ formatter.feature({
   ]
 });
 formatter.scenario({
-  "name": "Login with valid credentials",
+  "name": "Login with invalid credentials",
   "description": "",
   "keyword": "Scenario",
   "tags": [
@@ -26,26 +26,26 @@ formatter.before({
   "status": "passed"
 });
 formatter.step({
-  "name": "login with valid credentials",
+  "name": "login with invalid credentials",
   "keyword": "When "
 });
 formatter.match({
-  "location": "com.hrms.stepDefinitions.LoginStepDefinitions.login_with_valid_credentials()"
+  "location": "com.hrms.stepDefinitions.LoginStepDefinitions.login_with_invalid_credentials()"
 });
 formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "verify the dasboard logo is displayes",
+  "name": "verify the error message",
   "keyword": "Then "
 });
 formatter.match({
-  "location": "com.hrms.stepDefinitions.LoginStepDefinitions.verify_the_dasboard_logo_is_displayes()"
+  "location": "com.hrms.stepDefinitions.LoginStepDefinitions.verify_the_error_message()"
 });
 formatter.result({
   "status": "passed"
 });
-formatter.embedding("image/png", "embedded0.png", "Login with valid credentials");
+formatter.embedding("image/png", "embedded0.png", "Login with invalid credentials");
 formatter.after({
   "status": "passed"
 });
