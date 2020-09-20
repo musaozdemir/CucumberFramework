@@ -20,3 +20,4 @@ public class PageInitializer extends BaseClass{
 		persDetails=new PersonalDetailsPageElements();
 	}
 }
+
