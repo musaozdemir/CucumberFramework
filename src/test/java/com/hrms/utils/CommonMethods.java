@@ -2,12 +2,15 @@ package com.hrms.utils;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.xmlbeans.impl.store.Path;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoSuchFrameException;
 import org.openqa.selenium.OutputType;
@@ -32,6 +35,7 @@ public class CommonMethods extends PageInitializer {
 		element.clear();
 		element.sendKeys(text);
 	}
+	
 
 	/**
 	 * Method return Object of JavaScript Executor type
@@ -238,6 +242,16 @@ public class CommonMethods extends PageInitializer {
 			
 		}
 		
+	}
+	
+	static String jsonFile;
+	public static String readJson(String fileName) {
+		try {
+			jsonFile = new String(Files.readAllBytes(Paths.get(fileName)));
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return jsonFile;
 	}
 	
 	

@@ -10,7 +10,7 @@ import io.cucumber.junit.CucumberOptions;
 				 glue = "com/hrms/stepDefinitions", //set: Path to the Step Definitions
 				 dryRun = false, //true: checks if all the Steps have Step Definition
 				 monochrome = true, //true: Display console Output is more readable format
-				 tags = "  @smoke", //instruct: What tags in feature files should be executed
+				 tags = "@smoke", //instruct: What tags in feature files should be executed
 				 strict = false, // at the excetuion time if cucumber fing unimplemented method junit makrs as failed
 				 plugin = {"pretty",//set: What all report formats to use
 						   "html:target/cucumber-default-reports",// generates default html reports

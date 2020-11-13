@@ -23,6 +23,7 @@ public class ConfigsReader {
  		}
  	}
 
+ 	
  	public static String getPropValue(String key) {
 
  		return prop.getProperty(key);
