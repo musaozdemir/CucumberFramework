@@ -5,6 +5,9 @@ import java.util.List;
 import java.util.Map;
 
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.SendKeysAction;
 
 import com.hrms.utils.CommonMethods;
 import com.hrms.utils.ConfigsReader;
@@ -28,6 +31,7 @@ public class AddEmployeeDefinitions extends CommonMethods {
 	public void add_employee_details() {
 		sendText(addEmp.firstNameField, "Alex");
 		sendText(addEmp.lastName, "DeSouza");
+		driver.findElement(By.id("name")).sendKeys(Keys.RETURN);
 
 	}
 

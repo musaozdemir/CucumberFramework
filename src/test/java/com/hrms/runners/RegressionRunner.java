@@ -20,6 +20,6 @@ import io.cucumber.junit.CucumberOptions;
 				) 
 
 
-public class RegressionRuneer {
+public class RegressionRunner {
 
 }
